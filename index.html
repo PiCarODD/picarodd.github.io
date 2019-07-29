@@ -3,165 +3,83 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Portfolio</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<meta http-equiv="refresh" content="3;http://picarodd.github.io/" />
+<title>CodePen - Glowing text animation</title>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300');
-html, body {
-  font-weight: 500px;
-  background: #262626;
-  width: 100%;
-  height: 100%;
-  font-family: 'IBM Plex Mono', monospace;
-  padding: 2.5%;
-  overflow: hidden;
+    @import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Gochi+Hand');
+
+body{
+  background: #000;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.hidden {
-  display: none !important;
+h1{
+  font-size: 16em;
+  font-family: 'Caveat', cursive;
 }
 
-.visible {
-  display: inherit !important;
-}
-
-.cli-input,
-.cli-input:focus {
-  width: 94.9%;
-  background: none;
-  border: none;
-  outline: none;
-  color: #DADFE5;
-}
-
-.dollar {
-  margin-right: 1%;
-}
-
-.cli {
-  width: 800px;
-}
-
-.cli .cli-header {
-  background: #EEF1F5;
-  height: 25px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 6px 15px 0 15px;
-  font-size: .75em;
-  color: #9b9fa5;
-}
-
-.cli .cli-header span {
-  display: inline-block;
-  text-align: center;
+h1 span{
+  display: block;
+  float: left;
+  animation: animate 2.25s linear infinite;
+  margin: 0 5px;
+  padding: 0;
   position: relative;
-  top: -1px;
-  margin-left: 15px;
+  color: #111;
 }
 
-.cli .cli-header span:hover {
-  cursor: default;
+h1 span:nth-child(1){
+  animation-delay: 0s;
+}
+h1 span:nth-child(2){
+  animation-delay: .25s;
+}
+h1 span:nth-child(2){
+  animation-delay: .5s;
+}
+h1 span:nth-child(3){
+  animation-delay: .75s;
+}
+h1 span:nth-child(4){
+  animation-delay: 1s;
+}
+h1 span:nth-child(5){
+  animation-delay: 1.25s;
+}
+h1 span:nth-child(6){
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(7){
+  animation-delay: 1.75s;
 }
 
-.cli .cli-header .dot {
-  background: #D8DCE2;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  top: 2px;
-  transition: all .25s ease-in-out;
+
+
+
+@keyframes animate {
+  0%, 100%{
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00bbff,
+      0 0 20px #00bbff,
+      0 0 40px #00bbff,
+      0 0 80px #00bbff,
+      0 0 120px #00bbff,
+      0 0 200px #00bbff,
+      0 0 300px #00bbff,
+      0 0 400px #00bbff;
+  }
+  5%, 95%{
+    color: #111;
+    filter: blur(0px);
+    text-shadow: none;
+  }
 }
 
-.cli .cli-header .dot:not(:nth-child(1)) {
-  margin-left: 4px;
-}
-/* Colors for dots */
 
-.cli .cli-header .dot:nth-child(1) {
-  background: #DD333F;
-}
-
-.cli .cli-header .dot:nth-child(2) {
-  background: #F5D76E;
-}
-
-.cli .cli-header .dot:nth-child(3) {
-  background: #5FDD68;
-}
-
-.cli .cli-body {
-  background: #353B46;
-  padding: 30px;
-  min-height: 50%;
-  min-height: 50vh;
-  max-height: 50%;
-  max-height: 50vh;
-  color: #DADFE5;
-  font-size: .75em;
-  font-weight: 500;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  overflow: auto;
-  overflow-y: scroll;
-}
-
-.cli .cli-body:hover {
-  cursor: text;
-}
-
-.cli .cli-body p {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.cli .cli-body p.success {
-  color: #5FDD68;
-}
-span{
-  color:#4E9A06FF;
-  font-size: 15px;
-}
-.cli .cli-body p.error {
-  color: #DD333F;
-}
-
-.cli .cli-body p.small {
-  font-size: .7em;
-}
-
-.cli .cli-body p a,
-.cli .cli-body p a:visited {
-  color: #dadfe5;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-button {
-  width: 8px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #D8DCE2;
-  border: thin solid #D8DCE2;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #7d7d7d;
-}
   </style>
 <script>
   window.console = window.console || function(t) {};
@@ -173,69 +91,14 @@ span{
 </script>
 </head>
 <body translate="no">
-
-<div class="cli">
-  <h1 style="color:#278935FF">./Hein Htet Aung</h1>
-<div class="cli-header">
-<a class="dot" href="#"></a>
-<a class="dot" href="#"></a>
-<a class="dot" href="#"></a>
-</div>
-<div class="cli-body" ng-click="focusTextarea()">
-<div class="cli-control">
-  <h3>portfolio@heinhtetaung</h3>
-<span class="dollar left">portfolio$whoami</span>
-<div>Hein Htet Aung</div>
-<span class="dollar left">portfolio$cat info.txt</span>
-<div>
-  Email:heinjame@gmail.com<br>
-  Phone:0912121211<br>
-  Address:Magway<br>
-  Birthday:12/12/1998<br>
-  Nationality:Myanmar<br>
-</div>
-<span class="dollar left">portfolio$cat education.txt</span>
-<div>
-  University:University Of Computer Studies Magway<br>
-  Year of Passing:5 Years<br>
-  Degree:B.C.Sc<br>
-</div>
-<span class="dollar left">portfolio$cat languages.txt</span>
-<div>
-  Python(Python -m SimpleHTTPServer 1337?)<br>
-  Java(syso ctrl+space)<br>
-  HTML(html:5 tab)<br>
-  CSS(. class # id)<br>
-  Bootstrap(.container>.row tab)<br>
-  JavaScript(&lt;svg onload=alert(1)&gt;<br>
-  JQuery($(document.ready?))<br>
-  Node.js(requiredddddddd)<br>
-</div>
-<span class="dollar left">portfolio$cat achievements.txt</span>
-<div>
-  Hall Of Fames:Dell,TrendMicro,SAP<br>
-  Achievements:<br>
-  Third Place In Myanmar Cyber Security Challenge(2019),NayPyiTaw<br>
-  Third Place In UCSMGY First Project Show<br>
-  Third Place In UCSMGY Programming Contest<br>
-</div>
-<span class="dollar left">portfolio$cat about.txt</span>
-<div>
-  Love in CyberSecurity , Web Developer && CTF player , In love with hacking stuff.
-</div>
-<input type="text" class="cli-input right" name="cli-input" autofocus>
-</div>
-</div>
-</div>
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-<script id="rendered-js">
-      $(document).ready(function () {
-  $('.cli-input').on('change', function () {
-    $('.cli-control').before('<p class="success"><span class="dollar">$</span> ' + $(this).val() + '</p>');
-    $(this).val('');
-  });
-});
-      //# sourceURL=pen.js
-    </script>
+<h1>
+	<span>W</span>
+	<span>3</span>
+	<span>l</span>
+	<span>c</span>
+	<span>0</span>
+	<span>m</span>
+	<span>e</span>
+</h1>
 </body>
 </html>
