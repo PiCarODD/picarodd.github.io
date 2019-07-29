@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Portfolio</title>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300');
+html, body {
+  font-weight: 500px;
+  background: #262626;
+  width: 100%;
+  height: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 2.5%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.terminal{
+  content: "./Hein Htet Aung";
+}
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: inherit !important;
+}
+
+.cli-input,
+.cli-input:focus {
+  width: 94.9%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #DADFE5;
+}
+
+.dollar {
+  margin-right: 1%;
+}
+
+.cli {
+  width: 800px;
+}
+
+.cli .cli-header {
+  background: #EEF1F5;
+  height: 25px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 6px 15px 0 15px;
+  font-size: .75em;
+  color: #9b9fa5;
+}
+
+.cli .cli-header span {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -1px;
+  margin-left: 15px;
+}
+
+.cli .cli-header span:hover {
+  cursor: default;
+}
+
+.cli .cli-header .dot {
+  background: #D8DCE2;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  transition: all .25s ease-in-out;
+}
+
+.cli .cli-header .dot:not(:nth-child(1)) {
+  margin-left: 4px;
+}
+/* Colors for dots */
+
+.cli .cli-header .dot:nth-child(1) {
+  background: #DD333F;
+}
+
+.cli .cli-header .dot:nth-child(2) {
+  background: #F5D76E;
+}
+
+.cli .cli-header .dot:nth-child(3) {
+  background: #5FDD68;
+}
+
+.cli .cli-body {
+  background: #353B46;
+  padding: 30px;
+  min-height: 50%;
+  min-height: 50vh;
+  max-height: 50%;
+  max-height: 50vh;
+  color: #DADFE5;
+  font-size: .75em;
+  font-weight: 500;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.cli .cli-body:hover {
+  cursor: text;
+}
+
+.cli .cli-body p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.cli .cli-body p.success {
+  color: #5FDD68;
+}
+span{
+  color:#4E9A06FF;
+  font-size: 15px;
+}
+.cli .cli-body p.error {
+  color: #DD333F;
+}
+
+.cli .cli-body p.small {
+  font-size: .7em;
+}
+
+.cli .cli-body p a,
+.cli .cli-body p a:visited {
+  color: #dadfe5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8DCE2;
+  border: thin solid #D8DCE2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7d7d7d;
+}
+  </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+<div class="cli">
+  <h3 class="terminal">./Hein_Htet_Aung</h3>
+<div class="cli-header">
+<a class="dot" href="#"></a>
+<a class="dot" href="#"></a>
+<a class="dot" href="#"></a>
+</div>
+<div class="cli-body" ng-click="focusTextarea()">
+<div class="cli-control">
+<span class="dollar left">portfolio$whoami</span>
+<div>Hein Htet Aung</div>
+<span class="dollar left">portfolio$cat info.txt</span>
+<div>
+  Email:heinjame@gmail.com<br>
+  Phone:0912121211<br>
+  Address:Magway<br>
+  Birthday:12/12/1998<br>
+  Nationality:Myanmar<br>
+</div>
+<span class="dollar left">portfolio$cat education.txt</span>
+<div>
+  University:University Of Computer Studies Magway<br>
+  Year of Passing:5 Years<br>
+  Degree:B.C.Sc<br>
+</div>
+<span class="dollar left">portfolio$cat languages.txt</span>
+<div>
+  Python<br>
+  Java<br>
+  HTML<br>
+  CSS<br>
+  Bootstrap<br>
+  JavaScript<br>
+  JQuery<br>
+  Node.js<br>
+</div>
+<span class="dollar left">portfolio$cat achievements.txt</span>
+<div>
+  Hall Of Fames:Dell,TrendMicro,SAP<br>
+  Achievements:<br>
+  Third Place In Myanmar Cyber Security Challenge(2019),NayPyiTaw<br>
+  Third Place In UCSMGY First Project Show<br>
+  Third Place In UCSMGY Programming Contest<br>
+</div>
+<span class="dollar left">portfolio$cat about.txt</span>
+<div>
+  Love in CyberSecurity , Web Developer && CTF player , In love with hacking stuff.
+</div>
+<input type="text" class="cli-input right" name="cli-input" autofocus>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script id="rendered-js">
+      $(document).ready(function () {
+  $('.cli-input').on('change', function () {
+    $('.cli-control').before('<p class="success"><span class="dollar">$</span> ' + $(this).val() + '</p>');
+    $(this).val('');
+  });
+});
+      //# sourceURL=pen.js
+    </script>
+</body>
+</html>
