@@ -2,101 +2,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>PiCarO:Home</title>
+	<meta charset="UTF-8">
+	<title>PiCarO:Home</title>
 	<meta http-equiv="refresh" content="3;http://picarodd.github.io/info.html" />
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Gochi+Hand');
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-body{
-  background: #000;
-  display: flex;
-  justify-content: center;
-}
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Caveat:400,700|Gochi+Hand');
 
-h1{
-  font-size: 16em;
-  font-family: 'Caveat', cursive;
-}
+		body{
+			background: #000;
+			display: flex;
+			justify-content: center;
+		}
 
-h1 span{
-  display: block;
-  float: left;
-  animation: animate 2.25s linear infinite;
-  margin: 0 5px;
-  padding: 0;
-  position: relative;
-  color: #111;
-}
+		h1{
+			font-size: 16em;
+			font-family: 'Caveat', cursive;
+		}
 
-h1 span:nth-child(1){
-  animation-delay: 0s;
-}
-h1 span:nth-child(2){
-  animation-delay: .25s;
-}
-h1 span:nth-child(2){
-  animation-delay: .5s;
-}
-h1 span:nth-child(3){
-  animation-delay: .75s;
-}
-h1 span:nth-child(4){
-  animation-delay: 1s;
-}
-h1 span:nth-child(5){
-  animation-delay: 1.25s;
-}
-h1 span:nth-child(6){
-  animation-delay: 1.5s;
-}
-h1 span:nth-child(7){
-  animation-delay: 1.75s;
-}
+		h1 span{
+			display: block;
+			float: left;
+			animation: animate 2.25s linear infinite;
+			margin: 0 5px;
+			padding: 0;
+			position: relative;
+			color: #111;
+		}
 
-
-
-
-@keyframes animate {
-  0%, 100%{
-    color: #fff;
-    filter: blur(2px);
-    text-shadow: 0 0 10px #00bbff,
-      0 0 20px #00bbff,
-      0 0 40px #00bbff,
-      0 0 80px #00bbff,
-      0 0 120px #00bbff,
-      0 0 200px #00bbff,
-      0 0 300px #00bbff,
-      0 0 400px #00bbff;
-  }
-  5%, 95%{
-    color: #111;
-    filter: blur(0px);
-    text-shadow: none;
-  }
-}
+		h1 span:nth-child(1){
+			animation-delay: 0s;
+		}
+		h1 span:nth-child(2){
+			animation-delay: .25s;
+		}
+		h1 span:nth-child(2){
+			animation-delay: .5s;
+		}
+		h1 span:nth-child(3){
+			animation-delay: .75s;
+		}
+		h1 span:nth-child(4){
+			animation-delay: 1s;
+		}
+		h1 span:nth-child(5){
+			animation-delay: 1.25s;
+		}
+		h1 span:nth-child(6){
+			animation-delay: 1.5s;
+		}
+		h1 span:nth-child(7){
+			animation-delay: 1.75s;
+		}
 
 
-  </style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
+
+
+		@keyframes animate {
+			0%, 100%{
+				color: #fff;
+				filter: blur(2px);
+				text-shadow: 0 0 10px #00bbff,
+				0 0 20px #00bbff,
+				0 0 40px #00bbff,
+				0 0 80px #00bbff,
+				0 0 120px #00bbff,
+				0 0 200px #00bbff,
+				0 0 300px #00bbff,
+				0 0 400px #00bbff;
+			}
+			5%, 95%{
+				color: #111;
+				filter: blur(0px);
+				text-shadow: none;
+			}
+		}
+
+
+	</style>
+	<script>
+		window.console = window.console || function(t) {};
+	</script>
+	<script>
+		if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		}
+	</script>
 </head>
 <body translate="no">
-<h1>
-	<span>W</span>
-	<span>3</span>
-	<span>l</span>
-	<span>c</span>
-	<span>0</span>
-	<span>m</span>
-	<span>e</span>
-</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<h1>
+					<span>W</span>
+					<span>3</span>
+					<span>l</span>
+					<span>c</span>
+					<span>0</span>
+					<span>m</span>
+					<span>e</span>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
