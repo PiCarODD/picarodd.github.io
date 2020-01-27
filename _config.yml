@@ -1,5 +1,5 @@
 title: picaro@wab
-description: WTF notes by PiCarO
-show_downloads: true
+description: My notes, my lifes, my memory, my research
+show_downloads: false
 google_analytics:
-theme: jekyll-theme-cayman
+theme: jekyll-theme-leap-day
