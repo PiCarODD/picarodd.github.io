@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: defaultþ
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
@@ -10,9 +10,22 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+# Linux Basic
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Hello guys, nice to meet you from my first post on my site.I will share a lot of notes and resources here. I hope you enjoy.
+**In my first post** you will learn about linux basic
+
+**If you are linux user, you must love to use terminal like a god!**
+Basic Linux commends
+1. ls (list of directory)
+2. ls -al (Detail list of directory)
+3. cd (Change Directory)
+4. cd- (Back to recent directory)
+5. cd.. (Back to one directory)
+6. pwd (Current WOrking directory)
+7. whoami (whoami)
+8. uname (your os info)
+9. id (get current user's name,id,group)
 
 ## Header 2
 
