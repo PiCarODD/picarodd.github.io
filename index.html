@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+	<meta charset='UTF-8'>
+	<title>CodePen Demo</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/tools.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<table border="1" style="align-items: center;">
+				<tr>
+					<td>
+						<input type="text" style="color:#0EF222; font-size: 18pt; height: 40px; width:980px; " id="result">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="tree">
+		<ul>
+			<li>
+				<a href="#">Eazy OSCP</a>
+				<ul>
+					<li>
+						<a href="#">Initial Enumeration</a>
+						<ul>
+							<li>
+								<a href="#">Nmap Scan</a>
+								<ul class="vertical">
+									<li><a href="#"><input type="checkbox" value="fpscan" onclick="nmapfullport();">Full Port Scan</a></li>
+									<li><a href="#"><input type="checkbox" value="sscan" onclick="nmapinfoscan();">Service Scan</a></li>
+									<li><a href="#"><input type="checkbox" value="udpscan" onclick="nmapudpscan();">UDP Scan</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Ports</a>
+								<ul>
+									<li>
+										<a href="#">FTP</a>
+										<ul class="vertical">
+											<li><a href="#"><input type="checkbox" onclick="anonyftp();">Anonymous Login</a></a></li>
+											<li><a href="#"><input type="checkbox" onclick="versionftp();">Check Version</a></a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">WEB Servers</a>
+										<ul class="vertical">
+											<li><a href="#"><input type="checkbox">SSL Scan(port 443 only)</a></a></li>
+											<li><a href="#"><input type="checkbox">Dir Fuzz</a></a></li>
+											<li><a href="#"><input type="checkbox">Extension check</a></li>
+											<li><a href="#"><input type="checkbox">Default Username and Passwords</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">SMB</a>
+										<ul class="vertical">
+											<li><a href="#"><input type="checkbox">Enumerate Shares</a></a></li>
+											<li><a href="#"><input type="checkbox">Version Check</a></li>
+											<li><a href="#"><input type="checkbox">Check sentative data inside or not</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Others</a>
+										<ul class="vertical">
+											<li><a href="#"><input type="checkbox">Understand how service work</a></a></li>
+											<li><a href="#"><input type="checkbox">Version Check</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Linux</a>
+						<ul class="vertical">
+							<li><a href="#"><input type="checkbox">Kernal Version</a></li>
+							<li><a href="#"><input type="checkbox">Sudo</a></li>
+							<li><a href="#"><input type="checkbox">Crons</a></li>
+							<li><a href="#"><input type="checkbox">File Permissions(SUID)</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Windows</a>
+						<ul class="vertical">
+							<li><a href="#"><input type="checkbox">Kernal Version</a></li>
+							<li><a href="#"><input type="checkbox">Services</a></li>
+							<li><a href="#"><input type="checkbox">Schedule Tasks</a></li>
+							<li><a href="#"><input type="checkbox">Potato</a></li>
+							<li><a href="#"><input type="checkbox">Start Up Applications</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<i>Make with Love PiCarO(W.A.B)</i>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
